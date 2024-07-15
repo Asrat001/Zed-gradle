@@ -1,0 +1,16 @@
+id = "gradle"
+name = "GRADLE"
+description = "GRADLE support."
+version = "0.1.1"
+schema_version = 1
+authors = ["Asrat Adane <asratadane169@gmail.com>"]
+repository = "https://github.com/zed-industries/zed"
+
+[language_servers.gradle]
+name = "gradle language server"
+language = "Gradle"
+languages = ["Gradle"]
+
+[grammars.groovy]
+repository = "https://github.com/murtaza64/tree-sitter-groovy"
+commit = "6c5c8813233fe326e24c5ef032858d13f8006a8d"

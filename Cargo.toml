@@ -1,0 +1,16 @@
+[package]
+name = "zed_gradle"
+version = "0.0.3"
+edition = "2021"
+publish = false
+
+
+[lints]
+workspace = true
+
+[lib]
+path = "src/gradle.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+zed_extension_api = "0.0.6"

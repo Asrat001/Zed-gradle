@@ -1,0 +1,25 @@
+name = "gradle"
+grammar = "groovy"
+path_suffixes = ["groovy", "gradle", "Jenkinsfile", "JenkinsFile"]
+first_line_pattern = '^#!.*groovy'
+brackets = [
+    { start = "{", end = "}", close = true, newline = true },
+    { start = "[", end = "]", close = true, newline = true },
+    { start = "(", end = ")", close = true, newline = true },
+    { start = "<", end = ">", close = true, newline = true },
+    { start = "/*", end = " */", close = true, newline = true },
+    { start = "'''", end = "'''", close = true, newline = false },
+    { start = "\"\"\"", end = "\"\"\"", close = true, newline = false },
+    { start = "'", end = "'", close = true, newline = false, not_in = [
+        "string",
+        "comment",
+    ] },
+    { start = "\"", end = "\"", close = true, newline = false, not_in = [
+        "string",
+        "comment",
+    ] },
+]
+autoclose_before = ",]}>"
+collapsed_placeholder = " /* ... */ "
+line_comments = ["// "]
+block_comment = ["/* ", " */", "/** ", " */", "/**@ ", " */"]
